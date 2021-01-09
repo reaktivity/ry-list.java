@@ -15,20 +15,25 @@
  */
 package org.reaktivity.ry.list.internal.command;
 
+import org.reaktivity.nukleus.Configuration;
+import org.reaktivity.nukleus.Nukleus;
+import org.reaktivity.nukleus.NukleusFactory;
 import org.reaktivity.ry.RyCommand;
 
-import com.github.rvesse.airline.annotations.Arguments;
 import com.github.rvesse.airline.annotations.Command;
 
 @Command(name = "list")
 public final class RyListCommand extends RyCommand
 {
-    @Arguments(description = "argument")
-    public String argument = "arg";
-
     @Override
     public void run()
     {
-        // TODO
+        NukleusFactory factory = NukleusFactory.instantiate();
+        Configuration config = new Configuration();
+        for (String name : factory.names())
+        {
+            Nukleus nukleus = factory.create(name, config);
+            System.out.format("%-10s %s\n", name, nukleus.getClass());
+        }
     }
 }

@@ -51,6 +51,11 @@
         <artifactId>ry</artifactId>
         <version>develop-SNAPSHOT</version>
     </dependency>
+    <dependency>
+        <groupId>org.reaktivity</groupId>
+        <artifactId>nukleus</artifactId>
+        <version>0.51</version>
+    </dependency>
   </dependencies>
 
   <build>
