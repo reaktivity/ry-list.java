@@ -49,7 +49,8 @@
     <dependency>
         <groupId>org.reaktivity</groupId>
         <artifactId>ry</artifactId>
-        <version>develop-SNAPSHOT</version>
+        <version>0.50</version>
+        <scope>provided</scope>
     </dependency>
     <dependency>
         <groupId>org.reaktivity</groupId>
