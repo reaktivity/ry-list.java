@@ -16,7 +16,7 @@
 module org.reaktivity.ry.list
 {
     requires org.reaktivity.ry;
-    requires org.reaktivity.nukleus;
+    requires org.reaktivity.reaktor;
 
     opens org.reaktivity.ry.list.internal.command
        to com.github.rvesse.airline;
